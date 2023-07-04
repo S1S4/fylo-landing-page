@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap'); 
+/* font-family: 'Raleway', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* font-family: 'Open Sans', sans-serif; */
+
+:root {
+    /* Primary */
+    --veryDarkBlue: hsl(243, 87%, 12%);
+    --desaturatedBlue: hsl(238, 22%, 44%);
+
+    /* Accent */
+    --brightBlue: hsl(224, 93%, 58%);
+    --moderateCyan: hsl(170, 45%, 43%);
+
+    /* Neutral */
+    --lightGrayishBlue: hsl(240, 75%, 98%);
+    --lightGray: hsl(0, 0%, 75%);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.main-container {
+    display: grid;
+    min-height: 100vh;
+    background-color: white;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+}
+.navbar img {
+    width: 27%;
+}
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+}
+.nav-button {
+    margin: 0 5px;
+    border: none;
+    background-color: white;
+}

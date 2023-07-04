@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/styles.css">
   
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
 
@@ -15,30 +16,32 @@
   </style>
 </head>
 <body>
-  <main>
+  <main class="main-container">
     <nav class="navbar">
       <img src="./images/logo.svg" alt="fylo-logo" id="logo">
-      <input type="button" value="Features" class="nav-button features">
-      <input type="button" value="Team" class="nav-button team">
-      <input type="button" value="Sign In" class="nav-button sign-in">
+      <div class="navbar-buttons">
+        <input type="button" value="Features" class="nav-button features">
+        <input type="button" value="Team" class="nav-button team">
+        <input type="button" value="Sign In" class="nav-button sign-in">
+      </div>
     </nav>
 
-    <section>
+    <section class="files-section section--1">
       <h1>
         All your files in one secure location, accessible anywhere.
       </h1>
       <p>
         Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.
       </p>
-      <form>
+      <form class="files-section--form form">
         <input type="text" placeholder="Enter your email...">
         <input type="submit" value="Get Started">
       </form>
-        <img src="./images/illustration-1.svg" alt="illustration">
+        <!-- <img src="./images/illustration-1.svg" alt="illustration"> -->
     </section>
 
-    <section>
-      <div>       
+    <section class="productivity-section section--2">
+      <div class="productivity-section-description">       
         <h2>Stay productive, wherever you are</h2>
         <p>
           Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.
@@ -49,7 +52,7 @@
         <a href="#">See how Fylo works</a>
       </div>
 
-      <div>
+      <div class="productivity-section-comment">
         <p>
           Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
         </p>
@@ -58,39 +61,45 @@
           <span>Founder & CEO, Huddle</span>
         </p>
       </div>
-      <img src="./images/illustration-2.svg" alt="illustration">
+      <!-- <img src="./images/illustration-2.svg" alt="illustration"> -->
     </section>
 
-    <section>
+    <section class="early-access-section section--3">
       <h3>Get early access today</h3>
       <p>
         It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
       </p>
-      <form>
+      <form class="early-access-section--form form">
         <input type="text" placeholder="email@example.com">
         <input type="button" value="Get started for free">
       </form>
     </section>
 
-    <footer>
+    <footer class="footer">
       <img src="./images/logo.svg" alt="logo">
-      <ul>
+      <ul class="contact-information">
         <li>Phone: +1-543-123-4567</li>
         <li>example@fylo.com</li>
       </ul>
 
-      <ul>
+      <ul class="about-us">
         <li>About Us</li>
         <li>Jobs</li>
         <li>Press</li>
         <li>Blog</li>
       </ul>
 
-      <ul>
+      <ul class="contact-us">
         <li>Contact Us</li>
         <li>Terms</li>
         <li>Privacy</li>
       </ul>
+
+      <div class="social-media">
+        <input type="image" name="phone" src="images/facebook-f.svg" alt="image-phone" width="20" height="20">
+        <input type="image" name="phone" src="images/twitter.svg" alt="image-phone" width="20" height="20">
+        <input type="image" name="phone" src="images/instagram.svg" alt="image-phone" width="20" height="20">
+      </div>
     </footer>
   </main>
 
