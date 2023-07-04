@@ -24,22 +24,21 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y: scroll;
+    font-size: 1rem;
 }
 body::-webkit-scrollbar {
     display: none;
 }
 .main-container {
-    display: grid;
     min-height: 100vh;
-    background-color: white;
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     padding: 24px;
 }
-.navbar img {
-    width: 27%;
+.navbar #logo {
+    width: 26%;
 }
 .navbar-buttons {
     display: flex;
@@ -49,4 +48,56 @@ body::-webkit-scrollbar {
     margin: 0 5px;
     border: none;
     background-color: white;
+}
+
+/* ------------------------------------------------------ */
+
+.section--1,
+.section--2,
+.section--3,
+.footer {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0 1.5rem;
+}
+
+/* ------------------------------------------------------ */
+
+.section--1 {
+    text-align: center;
+}
+.section--1 #illustration-1 {
+    display: block;
+    justify-self: center;
+    max-width: 300px;
+}
+.section--1 h1 {
+    color: var(--veryDarkBlue);
+    font-size: 1.8rem;
+    margin: 0.9375rem 0;
+}
+.section--1 p {
+    font-size: 1.1rem;
+    line-height: 1.375rem;
+    margin: 15px 0;
+}
+
+/* ------------------------------------------------------ */
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.form-field {
+    border: 1px solid var(--desaturatedBlue);
+    border-radius: 1px;
+    margin-bottom: 0.625rem;
+    height: 2rem;
+}
+.form-field::placeholder {
+    padding-left: 10px;
+}
+.submit-button {
+    color: var(--lightGrayishBlue);
+    background-color: var(--brightBlue);
 }
