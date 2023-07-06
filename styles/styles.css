@@ -38,7 +38,7 @@ body::-webkit-scrollbar {
     padding: 24px;
 }
 .navbar #logo {
-    width: 26%;
+    max-width: 26%;
 }
 .navbar-buttons {
     display: flex;
@@ -58,7 +58,7 @@ body::-webkit-scrollbar {
 .footer {
     display: grid;
     grid-template-columns: auto;
-    margin: 0 1.5rem;
+    padding: 1.5rem 1.5rem;
 }
 
 /* ------------------------------------------------------ */
@@ -66,7 +66,26 @@ body::-webkit-scrollbar {
 .section--1 {
     text-align: center;
 }
-.section--1 #illustration-1 {
+.section--2 {
+    background: url(../images/bg-curve-mobile.svg) no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+.section--2 a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    background-image: url("/images/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 1.5625rem 1.5625rem;
+    background-position: right;
+    padding-right: 2.1875rem;
+    color: var(--moderateCyan);
+    border-bottom: 1px solid var(--moderateCyan);
+    /* -webkit-transition: all 200ms ease-in-out; */
+    /* transition: all 200ms ease-in-out; */
+}
+.section--1 #illustration-1,
+.section--2 #illustration-2 {
     display: block;
     justify-self: center;
     max-width: 300px;
@@ -76,11 +95,62 @@ body::-webkit-scrollbar {
     font-size: 1.8rem;
     margin: 0.9375rem 0;
 }
-.section--1 p {
+.section--2 h2,
+.section--3 h2 {
+    color: var(--veryDarkBlue);
+    text-align: center;
+    font-size: 1.3rem;
+    
+}
+.section--1 p,
+.section--2 p,
+.section--3 p {
     font-size: 1.1rem;
     line-height: 1.375rem;
     margin: 15px 0;
 }
+
+
+/* ------------------------------------------------------ */
+
+.productivity-section--description {
+    margin: 28px 0;
+}
+.productivity-section--comment {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: white;
+    background-image: url(../images/icon-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: 8% 10%;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 0px var(--lightGray);
+}
+.productivity-section--comment #profile {
+    display: grid;
+    grid-template-columns: 60px auto;
+    grid-template-areas: 
+        "picture name"
+        "picture nouns"
+        ;
+    grid-area: name;
+    font-size: 0.8rem;
+    color: var(--veryDarkBlue);
+}
+.productivity-section--comment #profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+    grid-area: picture;
+}
+.productivity-section--comment #profile-nouns {
+    grid-area: nouns;
+    color: var(--veryDarkBlue);
+}
+
 
 /* ------------------------------------------------------ */
 
