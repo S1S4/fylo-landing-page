@@ -37,8 +37,12 @@
         </p>
       </div>
       <form class="files-section--form form">
-        <input type="email" placeholder="Enter your email..." class="form-field email-input">
-        <input type="submit" value="Get Started" class="form-field submit-button">
+        <div class="form-field">
+          <input type="email" placeholder="Enter your email..." class="input email-input" id="email">
+          <small></small>
+        </div>
+
+        <input type="submit" value="Get Started" class="input submit-button">
       </form>
     </section>
 
@@ -75,8 +79,12 @@
         </p>
       </div>
       <form class="early-access-section--form form">
-        <input type="email" placeholder="email@example.com" class="form-field email-input">
-        <input type="submit" value="Get started for free" class="form-field submit-button">
+        <div class="form-field">
+          <input type="email" placeholder="email@example.com" class="input email-input" id="email">
+          <small></small>
+        </div>
+
+        <input type="submit" value="Get started for free" class="input submit-button">
       </form>
     </section>
 
@@ -101,9 +109,9 @@
       </ul>
 
       <div class="social-media">
-        <input type="image" name="facebook" id="facebook" src="images/facebook-f.svg" alt="image-phone" width="20" height="20">
-        <input type="image" name="twitter" id="twitter" src="images/twitter.svg" alt="image-phone" width="20" height="20">
-        <input type="image" name="instagram" id="instagram" src="images/instagram.svg" alt="image-phone" width="20" height="20">
+        <input type="image" id="facebook" src="images/facebook-f.svg" alt="image-phone" width="20" height="20">
+        <input type="image" id="twitter" src="images/twitter.svg" alt="image-phone" width="20" height="20">
+        <input type="image" id="instagram" src="images/instagram.svg" alt="image-phone" width="20" height="20">
       </div>
     </footer>
   </main>
@@ -114,5 +122,6 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
+  <script src="./index.js"></script>
 </body>
 </html>

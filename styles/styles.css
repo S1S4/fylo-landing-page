@@ -231,21 +231,47 @@ input {
     flex-direction: column;
 }
 .form-field {
+    display: flex;
+    flex-direction: column;
+}
+.input {
     border: 1px solid var(--desaturatedBlue);
     border-radius: 4px;
     margin-bottom: 0.625rem;
-    height: 3rem;
+    padding: 1rem;
     box-shadow: 5px 6px 13px -11px rgba(0,0,0,0.61);
 }
-.form-field::placeholder {
-    padding-left: 0.625rem;
+.input:focus {
+    outline: none;
 }
+.form-field.error input {
+    border-color: red;
+}
+.form-field.error .input::placeholder {
+    color: transparent;
+}
+
+.form-field small {
+    display: flex;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: red;
+}
+
 .submit-button {
     color: var(--lightGrayishBlue);
     background-color: var(--brightBlue);
+    cursor: pointer;
+}
+.submit-button:hover {
+    opacity: 0.7;
 }
 
+
+
 /* ------------------------------------------------------ */
+
+
 @media (min-width: 424px) and (max-width: 850px) {
     img,
     .files-section--description,
@@ -253,15 +279,14 @@ input {
     .productivity-section--comment,
     .early-access-section--description,
     .form {
-        max-width: 22.5rem;
+        max-width: 23rem;
     }
 }
 
-@media (min-width: 851px) {
+@media (min-width: 851px) and (max-width: 1100px) {
     /* SECTION--1 */
     .files-section {
         text-align: left;
-        grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
         grid-template-areas: 
         "filesDescription illustration1"
         "filesForm illustration1"
@@ -269,30 +294,41 @@ input {
         column-gap: 5rem;
 
     }
+    .files-section h1 {
+        margin: 0;
+    }
     .files-section--description {
         grid-area: filesDescription;
         margin-bottom: 10px;
+        max-width: 27rem;
     }
     .files-section--form {
         grid-area: filesForm;
         flex-direction: row;
+        align-items: center;
+        column-gap: 0.625rem;
+    }
+    .files-section .form-field {
+        flex-direction: row;
+        width: 60%;
     }
     .files-section--form input[type="email"] {
-        width: 60%;
-        margin-right: 1rem;
+        width: 100%;
+        margin: 0;
     }
     .files-section--form input[type="submit"] {
         width: 40%;
+        margin: 0;
     }
     .files-section #illustration-1 {
         grid-area: illustration1;
         align-self: center;
-        max-width: 90%;
+        max-width: 27rem;
     }
 
     /* SECTION--2 */
     .productivity-section {
-        grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+        /* grid-template-columns: repeat(auto-fit, minmax(20px, 1fr)); */
         grid-template-areas: 
         "productivityDescription illustration2"
         "productivityComment illustration2"
@@ -306,15 +342,17 @@ input {
     .productivity-section--description {
         grid-area: productivityDescription;
         align-items: flex-start;
+        max-width: 27rem;
     }
     .productivity-section--comment {
         grid-area: productivityComment;
         justify-self: left;
+        max-width: 25rem;
     }
     .productivity-section #illustration-2 {
         grid-area: illustration2;
         align-self: center;
-        max-width: 90%;
+        max-width: 27rem;
     }
 
     /* SECTION--3 */
@@ -324,6 +362,7 @@ input {
         grid-template-areas: 
         "earlyDescription earlyForm"
         ;
+        padding: 5rem 1.7rem;
     }
     .early-access-section--description {
         grid-area: earlyDescription;
