@@ -142,6 +142,10 @@ body::-webkit-scrollbar {
 .footer li {
     margin: 1.12rem 0;
 }
+.footer li:hover {
+    color: var(--brightBlue);
+    cursor: pointer;
+}
 .footer .social-media {
     justify-self: center;
 }
@@ -237,7 +241,6 @@ input {
 .input {
     border: 1px solid var(--desaturatedBlue);
     border-radius: 4px;
-    margin-bottom: 0.625rem;
     padding: 1rem;
     box-shadow: 5px 6px 13px -11px rgba(0,0,0,0.61);
 }
@@ -254,6 +257,7 @@ input {
 .form-field small {
     display: flex;
     font-size: 0.75rem;
+    margin: 5px 0;
     font-weight: 400;
     color: red;
 }
@@ -362,7 +366,6 @@ input {
         grid-template-areas: 
         "earlyDescription earlyForm"
         ;
-        padding: 5rem 1.7rem;
     }
     .early-access-section--description {
         grid-area: earlyDescription;
@@ -404,6 +407,13 @@ input {
 }
 
 @media (min-width: 1280px) {
+    .section--1,
+    .section--2,
+    .section--3,
+    .footer {
+        padding: 4.5rem 1rem;
+    }
+
     .files-section--description {
         max-width: 60%;
         align-self: center;
@@ -411,10 +421,40 @@ input {
     }
     .files-section--form {
         align-items: start;
-        min-width: 61%;
+        min-width: 60%;
         justify-self: center;
     }
     .files-section #illustration-1 {
         max-width: 90%;
+    }
+
+    .productivity-section--description {
+        max-width: 60%;
+        align-self: center;
+        justify-self: center;
+    }
+    .productivity-section--comment {
+        max-width: 50%;
+        justify-self: center;
+    }
+    .productivity-section #illustration-2 {
+        align-self: center;
+        max-width: 90%;
+        
+    }
+
+    .early-access-section--description {
+        max-width: 60%;
+        justify-self: center;
+    }
+    .early-access-section--form {
+        min-width: 60%;
+        justify-self: center;
+    }
+
+    .footer .contact-information,
+    .footer .about-us,
+    .footer .contact-us {
+        justify-self: center;
     }
 }
