@@ -13,11 +13,11 @@ This is a solution to the [Fylo landing page with two column layout challenge on
 
 ## Overview
 
-![](./design/desktop-design.jpg)
+![](https://i.imgur.com/a/jvTnqwx.jpg)
 
 ### Links
 
-- Solution URL: [Solution Page]()
+- Solution URL: [Solution Page](https://www.frontendmentor.io/solutions/responsive-landing-page-using-css-grid-with-form-validation-BbY4iIpCs8)
 - Live Site: [Live Site at Github Pages](https://s1s4.github.io/fylo-landing-page/)
 
 ## My process
