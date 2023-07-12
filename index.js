@@ -1,4 +1,5 @@
-const email = document.querySelector('.email-input');
+const email = document.getElementById('files-section--email');
+const textError = document.querySelector('small');
 const form = document.querySelector('.form');
 
 const isEmailValid = (email) => {
@@ -11,6 +12,7 @@ const showError = (input, message) => {
 
     formField.classList.remove('success');
     formField.classList.add('error');
+    textError.classList.toggle('inactive');
 
     const error = formField.querySelector('small');
     error.textContent = message;

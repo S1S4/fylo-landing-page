@@ -31,25 +31,33 @@ body {
 body::-webkit-scrollbar {
     display: none;
 }
+.form-field .inactive {
+    display: none;
+}
+
+/* ------------------------------------------------------ */
+
 .main-container {
     min-height: 100vh;
 }
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 24px;
+    padding: 1.5rem;
 }
 .navbar #logo {
     max-width: 26%;
+    cursor: pointer;
 }
 .navbar-buttons {
     display: flex;
     align-items: center;
 }
 .nav-button {
-    margin: 0 5px;
+    margin: 0 0.3125rem;
     border: none;
     background-color: white;
+    cursor: pointer;
 }
 
 /* ------------------------------------------------------ */
@@ -92,7 +100,7 @@ body::-webkit-scrollbar {
 .section--2 #illustration-2 {
     display: block;
     justify-self: center;
-    max-width: 300px;
+    max-width: 18.75rem;
 }
 
 /* ------------------------------------------------------ */
@@ -146,6 +154,20 @@ body::-webkit-scrollbar {
     color: var(--brightBlue);
     cursor: pointer;
 }
+.footer #phone-info {
+    background-image: url(../images/icon-phone.svg);
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+    background-position: left;
+    padding-left: 2rem;
+}
+.footer #email-info {
+    background-image: url(../images/icon-email.svg);
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+    background-position: left;
+    padding-left: 2rem;
+}
 .footer .social-media {
     justify-self: center;
 }
@@ -182,6 +204,9 @@ body::-webkit-scrollbar {
     padding-right: 2.1875rem;
     color: var(--moderateCyan);
     border-bottom: 1px solid var(--moderateCyan);
+}
+.productivity-section--description #arrow-link:hover {
+    opacity: 0.7;
 }
 .productivity-section--comment {
     display: flex;
@@ -242,6 +267,7 @@ input {
     border: 1px solid var(--desaturatedBlue);
     border-radius: 4px;
     padding: 1rem;
+    margin: 0.31rem 0;
     box-shadow: 5px 6px 13px -11px rgba(0,0,0,0.61);
 }
 .input:focus {
@@ -303,21 +329,21 @@ input {
     }
     .files-section--description {
         grid-area: filesDescription;
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
         max-width: 27rem;
     }
     .files-section--form {
         grid-area: filesForm;
         flex-direction: row;
         align-items: center;
-        column-gap: 0.625rem;
+        gap: 1rem;
     }
     .files-section .form-field {
-        flex-direction: row;
+        justify-content: center;
         width: 60%;
     }
     .files-section--form input[type="email"] {
-        width: 100%;
+        width: auto;
         margin: 0;
     }
     .files-section--form input[type="submit"] {
@@ -343,6 +369,9 @@ input {
         background-size: cover;
         background-position: top;
     }
+    .productivity-section h2 {
+        font-size: 1.8rem;
+    }
     .productivity-section--description {
         grid-area: productivityDescription;
         align-items: flex-start;
@@ -367,9 +396,12 @@ input {
         "earlyDescription earlyForm"
         ;
     }
+    .early-access-section h2 {
+        font-size: 1.8rem;
+    }
     .early-access-section--description {
         grid-area: earlyDescription;
-        margin-right: 25px;
+        margin-right: 1.5625rem;
     }
     .early-access-section--form {
         grid-area: earlyForm;
